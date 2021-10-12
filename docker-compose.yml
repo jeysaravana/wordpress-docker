@@ -1,11 +1,11 @@
 version: '3.3'
 volumes:
-   - wp_db_vol
+   - wpdbvol
 services:
    wpdbmysql:
      image: mysql:5.7
      volumes:
-       - wp_db_vol:/var/lib/mysql
+       - wpdbvol:/var/lib/mysql
        - ./sqlimport:/docker-entrypoint-initdb.d
      restart: always
      environment:

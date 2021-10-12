@@ -1,6 +1,6 @@
 version: '3.3'
 volumes:
-   wp_db_vol
+   - wp_db_vol
 services:
    wpdbmysql:
      image: mysql:5.7

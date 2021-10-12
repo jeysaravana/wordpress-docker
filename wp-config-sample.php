@@ -79,6 +79,11 @@ $table_prefix = 'wp_';
  */
 define( 'WP_DEBUG', true );
 
+if ( array_key_exists( 'HTTP_HOST', $_SERVER ) ) {
+	define( 'WP_SITEURL', 'https://' . $_SERVER['HTTP_HOST'] );
+	define( 'WP_HOME', 'https://' . $_SERVER['HTTP_HOST'] );
+}
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
